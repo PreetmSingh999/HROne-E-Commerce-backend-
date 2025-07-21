@@ -52,6 +52,53 @@ MONGODB_URL=mongodb+srv://mohammadsaqulain5:KNcXc3uXdpO5QOb9@cluster0.mbabzsy.mo
 
 ---
 
+## 📁 Project Structure
+
+```
+backend/
+├── main.py                 # FastAPI application entry point
+├── db.py                   # Database connection and configuration
+├── requirements.txt        # Python dependencies
+├── README.md              # Project documentation
+├── models/                # Pydantic data models
+│   ├── product_model.py   # Product-related models
+│   └── order_model.py     # Order-related models
+└── routes/                # API route handlers
+    ├── product_routes.py  # Product endpoints
+    └── order_routes.py    # Order endpoints
+```
+
+## 💾 Database Schema
+
+### Products Collection
+```json
+{
+    "_id": "ObjectId",
+    "name": "T-Shirt",
+    "price": 499.0,
+    "sizes": [
+        {
+            "size": "large",
+            "quantity": 5
+        }
+    ]
+}
+```
+
+### Orders Collection
+```json
+{
+    "_id": "ObjectId",
+    "userId": "user123",
+    "items": [
+        {
+            "productId": "product_object_id",
+            "qty": 2
+        }
+    ]
+}
+
+
 ## Deployment (Render)
 
 - The application is deployed on Render and accessible at:
